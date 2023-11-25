@@ -1,0 +1,572 @@
+:root{
+    --main-color:#343434;
+    --text-white:#fff;
+    --font-body:'Poppins', sans-serif;
+    --font-heading:'Montserrat', sans-serif;
+}
+body{
+    font-family: var(--font-body);
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: var(--font-heading);
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+.bg-section{
+    background-color: #f7f7f782;
+}
+.btn-black {
+    --bs-btn-color: var(--text-white);
+    --bs-btn-bg:var(--main-color);
+    --bs-btn-border-color: var(--main-color);
+    --bs-btn-hover-color: var(--main-color);
+    --bs-btn-hover-bg: var(--text-white);
+    --bs-btn-hover-border-color: var(--main-color);
+}
+.btn-white {
+    --bs-btn-color: #000;
+    --bs-btn-bg: transparent;
+    --bs-btn-border-color: var(--main-color);
+    --bs-btn-hover-color: var(--text-white);
+    --bs-btn-hover-bg: var(--main-color);
+    --bs-btn-hover-border-color: var(--main-color);
+}
+.main-title h2::after{
+    content: "";
+    position: absolute;
+    background-image: url(../images/dots.png);
+    background-repeat: repeat;
+    width: 17%;
+    height: 30px;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+
+/**************  Titles  **************************/
+.about-title h3{
+    font-size: 30px;
+    font-family: var(--second-font);
+    font-weight: 800;
+}
+.title h3{
+    position: relative;
+    font-size: 40px;
+    font-family: var(--second-font);
+    font-weight: 800 !important;
+}
+.title h3::after{
+    position: absolute;
+    content: ".  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .";
+    color: #b0b3b3;
+    top: 50%;
+    left: 25%;
+    width: 50%;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+/*************************** Nav bar *******************************/
+.nav-underline .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+    border-bottom: var(--bs-nav-underline-border-width) solid transparent;
+    color: #000;
+    font-weight: 700
+}
+.navbar-brand ,
+nav .navbar-nav>li>a {
+    color: #fff !important;
+    position: relative;
+    overflow: hidden;
+}
+nav .navbar-nav>li>a:after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    bottom: 5px;
+    left: 8px;
+    transition: all 0.5s;
+}
+
+nav  .nav-link{
+    transition: all 0.2s;
+}
+
+nav li:hover .nav-link{
+    text-decoration: underline;
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    text-decoration: underline;
+    font-weight: 700;
+}
+#logo h4{
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 800 !important;
+    /* padding-left: 5%; */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/******************************* Home ********************************/
+
+header {
+    background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)) ,url(../images/bg.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size:cover;
+}
+header .main-title{
+    font-size: 60px;
+    font-weight: 500;
+}
+header h1{
+    font-size: 60px;
+    font-family: var(--font-heading);
+    font-weight: 200;
+    position: relative;
+}
+header .I{
+    font-weight: 100;
+}
+header h5{
+    font-size: 50px;
+    font-weight: 800;
+    font-family: var(--font-heading);
+}
+header .scroll{
+    width: 30px;
+    height: 50px;
+    border: 1px solid #fff;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    animation: bounc 1s infinite linear;
+    -webkit-animation: bounc 1s infinite ;
+}
+header .scroll::after{
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 5px;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+}
+
+@keyframes bounc {
+    0%{bottom: 10px;}
+    30%{bottom: 30px;}
+    50%{bottom: 10px;}
+    60%{bottom: 15px;}
+    100%{bottom: 10px;}
+}
+
+header .social  i{
+    background-color: transparent;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+
+/****************************************** About *********************************/
+.mb-30{
+    margin-bottom: 30px;
+}
+#about .image {
+    
+    position: relative;
+}
+#about .image::after{
+    content: "";
+    width: 85%;
+    height: 85%;
+    position: absolute;
+    left: -25px;
+    bottom: -25px;
+    background-image: url(../images/dots.png);
+    background-repeat: repeat;
+    z-index: -1;
+}
+#about .about-caption .sub-title{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #999;
+}
+#about .about-caption p{
+    color: #748182;
+    font-size: 15px;
+    line-height: 24px;
+    font-family: var(--main-font);
+}
+#about .skills .progress{
+    width: 100%;
+    height: 25px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: #f7f7f7;
+    box-shadow: 0 2px 7px rgba(0,0,0,0.15) inset;
+    position: relative;
+}
+#about .skills .progress h6{
+    font-size: .8125rem;
+    position: relative;
+    z-index: 20;
+    top: 3px;
+    color: var(--text-white);
+}
+#about .skills .progress span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 5px;
+    background-color: #1c1c1c;
+    transition: all 1s;
+}
+#about .skills .progress span::after{
+    content: attr(data-value);
+    position: absolute;
+    top: 2px;
+    right: 10px;
+    font-size: 11px;
+    color: var(--text-white);
+}
+#about .btn-about{
+    font-size: 13px;
+    font-family: var(--main-font);
+}
+#about .btn-about .CV-button:hover{
+    color: #000;
+    background-color: #FFFFFF;
+}
+
+/****************************************** Sevvices *********************************/
+#services{
+    background-color: #f7f7f7;
+}
+#services .card{
+    background-color: var(--Nav-Color);
+}
+#services .card-body .icon{
+    font-size: 30px;
+    background-color: #e1e0e0;
+}
+#services .card-body:hover .icon{
+    color: #FFFFFF;
+    background-color: #000;
+}
+#services .card-body h6{
+    font-family: var(--second-font);
+    font-weight: 800;
+    font-size: 18px;
+}
+#services .card-body p{
+    font-size: 14px;
+    font-family: var(--main-font);
+}
+
+/*************************** Portfolio *****************/
+#portfolio .text-content .icon i{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #111;
+    background-color: #111;
+    color: #eee;
+}
+#portfolio .work-content .text-content{
+    position: absolute;
+    top: 51%;
+    width: 93%;
+    z-index: 99;
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: opacity 0.5s;
+}
+#portfolio .work-content:hover .text-content{
+    opacity: 1;
+}
+#portfolio .work-content .text-content h6{
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: bottom 0.5s;
+}
+#portfolio .work-content:hover .text-content h6{
+    bottom:50%;
+}
+#portfolio .work-content .overlay{
+    background-color:var(--text-white);
+    position: absolute;
+    top: 10px;
+    right: 13px;
+    left: 10px;
+    bottom: 9px;
+    width: 95%;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+#portfolio .work-content:hover .overlay{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#portfolio .text-content .icon i {
+    transition: all 0.3s ease-in-out; 
+  }
+
+#portfolio .text-content .icon i:hover {
+    background-color: #fff !important; 
+    color: #000 !important; 
+}
+
+/********************** Testimonials ****************************/
+#testimonials{
+    background-color: #f7f7f7;
+}
+#testimonials button{
+    width: 0.8rem;
+    height: 0.8rem;
+    background-color: rgb(134, 151, 145);
+    border-radius: 50%;
+}
+#testimonials p{
+    font-family: var(--main-font);
+    font-size: 15px;
+}
+#testimonials h6{
+    font-size: 16px;
+    font-family: var(--font-heading);
+    font-weight: 600;
+}
+#testimonials span{
+    font-size: 12px;
+    font-weight: 600;
+    font-family: var(--main-font);
+    color: #888888 !important;
+}
+#testimonials .carousel-item:hover{
+    cursor: grab;
+}
+
+/********************************* Counter *********************/
+.counter .counter-icon i{
+    color: #343434;
+}
+@property --num {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+}
+
+.counter-num h3 {
+    animation: counter 5s infinite alternate ease-in-out;
+    counter-reset: num var(--num);
+    font: 800 26px system-ui;
+    color: #343434;
+}
+
+.counter-num h3::after {
+    content: counter(num);
+}
+
+@keyframes counter {
+    from {
+        --num: 0;
+    }
+    
+    to {
+        --num: 850;
+    }
+}
+
+/***************************** Teams *********************/
+.single-team {
+    background-color: rgba(52, 52, 52,.8);
+    margin-bottom: 10px;
+}
+.img-area {
+    overflow: hidden;
+    position: relative;
+}
+.img-area img {
+    transition: scale 0.4s ease 0s;
+}
+.img-area:hover img {
+    scale: 1.2;
+    
+}
+.img-area:hover .social,
+.single-team:hover .social {
+    opacity:1;
+    transform: rotateY(0deg) scale(0.98,0.98);
+    
+}
+.img-area .social {
+    background-color: rgba(255, 255, 255, 0.95);
+    position: absolute;
+    text-align: center;
+    inset: 5px;
+    opacity: 0;
+    transition:  transform 0.5s,opacity 0.5s;
+    transform: rotateY(180deg) scale(0.5, 0.5);
+}
+.img-area .social ul {
+    text-align: center;
+    position: relative;
+    top: 181px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.img-area .social ul li a {
+    border: 1px solid #000;
+    color: #fff;
+    background-color: #000;
+    line-height: 40px;
+    text-align: center;
+    
+}
+.img-area .social ul i{
+    margin-inline: 5px;
+    width: 50px;
+    height: 50px;
+    background-color: #343434;
+    border-radius: 50%;
+    color: var(--text-white);
+}
+.img-area .social ul li i:hover {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+.img-text {
+    padding: 25px;
+    color: #fff;
+    text-align: center;
+}
+.img-text h5 {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/********************************** Contact **********************/
+#contact h6{
+    font-weight: 700;
+    font-family: var(--second-font);
+    font-size: 16px;
+}
+#contact p{
+    font-family: var(--main-font);
+    font-size: 15px;
+    color: #748182;
+}
+#contact i{
+    font-size: 25px !important;
+    background-color: #f7f7f7;
+}
+#contact .inner-item:hover i{
+    background-color: #000 !important;
+    color: #EEEEEE;
+}
+#contact .submit:hover{
+    color: #000;
+    background-color: #EEEEEE;
+}
+#contact h3{
+    position: relative;
+    font-size: 40px;
+    font-family: var(--second-font);
+    font-weight: 800 !important;
+}
+#contact h3::after{
+    position: absolute;
+    content: ".  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .";
+    color: #b0b3b3;
+    top: 50%;
+    left: 25%;
+    width: 50%;
+    font-size: 14px;
+    font-weight: 100;
+}
+#contact .btn-submit:hover{
+    color: #000;
+    background-color: #FFFFFF;
+}
+#contact input:focus{
+    box-shadow: none !important;
+}
+#contact textarea:focus{
+    box-shadow: none !important;
+}
+
+/********************************* Footer ****************************/
+#footer{
+    color: #7e7e7e !important;
+    font-size: 13px;
+    font-family: var(--main-font);
+}
+
+
+/*************** Media Query *********/
+@media (max-width: 750px){
+    .img-area .social{
+        width: 100% !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: start !important;
+        align-items: start; 
+    }
+    .img-area .social ul li a{
+        width: 60% !important;
+        margin-bottom: 90%;
+        padding-bottom: 20%;
+        display: flex;
+        align-items: start;
+    }
+    .img-area .social ul i{
+        font-size: 10px !important;
+        text-align: start !important;
+        
+    }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+    .img-area .social{
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: start !important;
+    }
+    .img-area .social ul li a{
+        width: 10% !important;
+    }
+    .img-area .social ul li a i{
+        font-size: 10px !important;
+        /* text-align: start !important; */
+    }
+}
+@media (min-width: 769px) and (max-width: 1200px){
+    .img-area .social{
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: start !important;
+    }
+    .img-area .social ul li a{
+        width: 10% !important;
+    }
+    .img-area .social ul li a i{
+        font-size: 10px !important;
+        /* text-align: start !important; */
+    }
+}
